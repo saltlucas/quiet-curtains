@@ -1,0 +1,74 @@
+// Medium
+
+//Typography
+h1,
+.h1 {
+  font-size: 60px;
+}
+
+h2,
+.h2 {
+  font-size: 46px;
+}
+
+h3,
+.h3 {
+  font-size: 30px;
+}
+
+.va-middle {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.column,
+.columns {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+//Slick Slider
+.slick-prev,
+.slick-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  height: 60px;
+  margin-top: -30px;
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 3rem;
+}
+
+.slick-next {
+  left: auto;
+  right: 3rem;
+}
+
+//Buttons
+button.button,
+a.button,
+.button,
+input.button {
+  padding: 1rem 1.6rem;
+}
+
+//Frontpage
+#home-slider-section {
+  .full-height {
+    height: calc(100vh - 130px);
+  }
+
+  .hero-slider-content-wrap {
+    margin-bottom: 0;
+  }
+}
+
+//Tabs
+.tabs-title {
+  float: left;
+}

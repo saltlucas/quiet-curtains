@@ -1,0 +1,50 @@
+// Variables
+//Row Spacing Margins
+$spacing: (extra-small: 0.5rem, small: 1rem, medium: 2rem, large: 4rem, extra-large: 6rem);
+
+@each $name, $value in $spacing {
+  .margin-top-#{$name} {
+    margin-top: $value !important;
+  }
+
+  .margin-bottom-#{$name} {
+    margin-bottom: $value !important;
+  }
+}
+
+@each $name, $value in $spacing {
+  .padding-#{$name} {
+    padding: $value !important;
+  }
+}
+
+// Colors
+$brand-primary: #559bda;
+$blue: #559bda;
+$blue-medium: #0071b8;
+$blue-dark: #224776;
+$orange: #f38f1e;
+$brown: #aa7455;
+$green: #899e6a;
+$earth-green: #837722;
+$yellow: #fec77c;
+$color: #fff;
+$black: #333;
+$gray: #212121;
+$gray-light: #eee;
+$black: #151515;
+
+$blue-highlight: #0878a3;
+$green-highlight: #325434;
+
+//Font Sizes
+$small-font: 18px;
+$normal-font: 20px;
+$large-font: 24px;
+
+/* sage/assets/styles/common/_variables.scss */
+// Slick Carousel font path
+$slick-font-path: "~slick-carousel/slick/fonts/";
+
+// Slick Carousel ajax-loader.gif path
+$slick-loader-path: "~slick-carousel/slick/";

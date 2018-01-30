@@ -1,0 +1,67 @@
+input {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+  box-sizing: content-box;
+}
+
+[type='text'],
+[type='password'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='email'],
+[type='number'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='url'],
+[type='color'],
+[type='submit'],
+textarea,
+input {
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  box-sizing: content-box;
+  line-height: 1.6;
+}
+
+[type='text']:focus,
+[type='password']:focus,
+[type='date']:focus,
+[type='datetime']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='week']:focus,
+[type='email']:focus,
+[type='number']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='time']:focus,
+[type='url']:focus,
+[type='color']:focus,
+textarea:focus {
+  background-color: transparent;
+}
+
+// Search form
+
+// Newsletter form
+.newsletter-signup {
+  input {
+    color: $white;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid white;
+    box-sizing: border-box;
+  }
+
+  [type='submit'] {
+    background-color: $blue;
+    border: none;
+  }
+}
+

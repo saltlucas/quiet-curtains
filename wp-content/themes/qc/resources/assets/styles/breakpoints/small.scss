@@ -1,0 +1,29 @@
+// Small
+.block.vertical-full {
+  .block-wrap {
+    min-height: auto;
+
+    &.aspect-3-2,
+    &.aspect-2-1,
+    &.block-wrap.aspect-3-1 {
+      min-height: auto;
+      position: relative;
+      height: auto;
+      padding: 0;
+      overflow: hidden;
+    }
+  }
+
+  .block-content {
+    position: relative;
+
+    .va-middle {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+#hero-content h1 {
+  margin-top: 16px;
+}
