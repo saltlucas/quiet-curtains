@@ -12,7 +12,7 @@ use Roots\Sage\Template\BladeProvider;
  */
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css' , asset_path('styles/main.css'), false, null);
-    wp_enqueue_style('google-fonts','//fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Condensed:700', false);
+    wp_enqueue_style('google-fonts','//fonts.googleapis.com/css?family=Montserrat:400,500,700|Bitter:700', false);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 }, 100);
 
@@ -41,7 +41,9 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+        'primary_navigation' => __('Primary Navigation', 'sage'),
+        'footer_1_navigation' => __('Footer 1 Navigation', 'sage'),
+        'footer_2_navigation' => __('Footer 2 Navigation', 'sage')        
     ]);
 
     /**
@@ -87,6 +89,14 @@ add_action('widgets_init', function () {
         'name'          => __('Footer', 'sage'),
         'id'            => 'sidebar-footer'
     ] + $config);
+    register_sidebar([
+        'name'          => __('Footer Menu 1', 'sage'),
+        'id'            => 'sidebar-footer-menu-column-1'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Footer Menu 2', 'sage'),
+        'id'            => 'sidebar-footer-menu-column-2'
+    ] + $config);    
 });
 
 /**

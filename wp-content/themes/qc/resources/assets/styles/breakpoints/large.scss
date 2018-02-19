@@ -39,14 +39,39 @@ button.button.search-icon {
   padding-right: 2rem;
 }
 
+.nav-utility {
+  position: absolute;
+  right: 2rem;
+  line-height: 87px;
+  text-transform: uppercase;
+
+  a {
+    font-size: 20px;
+  }
+}
+
+header.container.is-stuck {
+  .nav-utility {
+    line-height: 46px;
+  }
+}
+
 //Menu
+#nav-primary.nav-primary {
+  padding-left: 3rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 #menu-primary {
-  float: right;
+  float: left;
   padding-right: 2rem;
 }
 
 .is-dropdown-submenu {
   position: absolute;
+  width: 300px;
+  background-color: $white;
 }
 
 .dropdown.menu {
@@ -58,7 +83,8 @@ button.button.search-icon {
 
   .is-submenu-item {
     a {
-      line-height: 67px;
+      line-height: 1.6;
+      padding: 1rem 1.5rem;
     }
   }
 }
@@ -71,531 +97,9 @@ button.button.search-icon {
   height: calc(100vh - 87px);
 }
 
-//Highlights
-.product-highlight-image-container {
-  .image-point {
-    display: none;
-  }
-}
-
-//Product Highlights
-#product-highlights {
-  margin-bottom: 284px;
-}
-
-.product-points {
-  list-style-type: none;
-  margin-top: 0;
-
-  .hook-img {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-
-  h4 {
-    color: $blue-dark;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-
-  li {
-    color: #ddd;
-    counter-increment: step-counter;
-    margin-bottom: 4rem;
-    position: relative;
-
-    .point-content {
-      margin-top: 1rem;
-      padding-left: 2.5rem;
-      display: inline-block;
-      position: relative;
-    }
-
-    h3 {
-      display: inline-block;
-      position: relative;
-      padding-left: 2.5rem;
-      margin-top: 2px !important;
-    }
-
-    .point-line {
-      position: absolute;
-      height: 1px;
-      width: 0;
-      z-index: 100;
-      left: 102%;
-      top: 12px;
-
-      &::after {
-        content: ' ';
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        background: #ddd;
-      }
-    }
-
-    &#point-1 {
-      margin-bottom: 295px;
-    }
-
-    &#point-2 {
-      margin-bottom: 98px;
-    }
-
-    &::before {
-      content: counter(step-counter);
-      width: 30px;
-      height: 30px;
-      border: 2px solid #ddd;
-      color: #ddd;
-      font-weight: bold;
-      border-radius: 50%;
-      display: inline-block;
-      text-align: center;
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-
-    &.active {
-      color: $blue-dark;
-
-      .point-line {
-        &::after {
-          background: $blue-dark;
-          width: 100%;
-          -webkit-animation: dude 0.5s;
-          -moz-animation: dude 0.5s;
-          -o-animation: dude 0.5s;
-          animation: dude 0.5s;
-        }
-      }
-
-      &#point-1 {
-        .point-line {
-          width: 251px;
-        }
-      }
-
-      &#point-2 {
-        .point-line {
-          width: 177px;
-        }
-      }
-
-      &#point-3 .point-line {
-        width: 165px;
-      }
-
-      &#point-4 .point-line {
-        width: 174px;
-      }
-
-      &#point-5 .point-line {
-        width: 174px;
-      }
-
-      &::before {
-        border: 2px solid $blue-dark;
-        color: $blue-dark;
-      }
-    }
-  }
-}
-
-.points-title {
-  .h5 {
-    border-bottom: none;
-  }
-}
-
 //Frontpage
 #home-slider-section .full-height {
   height: calc(100vh - 87px);
-}
-
-#home-slider-section {
-  .edg-wrapper div {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 800px;
-    width: 100%;
-
-    &::before {
-      content: ' ';
-      position: absolute;
-      z-index: 2;
-      background: url('//localhost/edge/wp-content/themes/edge/dist/images/edg-target.svg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      right: -135px;
-      top: -117.2px;
-      width: 300px;
-      height: 300px;
-      opacity: 0.3;
-    }
-  }
-}
-
-.home-points {
-  .columns {
-    border-right: 1px solid $white;
-
-    &:first-child {
-      border-right: none;
-    }
-  }
-
-  > div:nth-child(2) {
-    border-left: 1px solid $white;
-  }
-}
-
-.addition-row {
-  max-width: 916px;
-
-  .item {
-    display: inline-block;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-
-    .va-middle {
-      > div {
-        display: block;
-        text-align: left;
-      }
-    }
-  }
-
-  .outline .va-middle > div {
-    position: relative;
-
-    &::before {
-      position: absolute;
-      top: 0;
-      width: 65px;
-      content: '';
-      background-color: rgba(255, 255, 255, 0.3);
-      height: 1px;
-      left: 0;
-      margin-left: 0;
-    }
-  }
-
-  .va-middle {
-    padding: 0;
-  }
-
-  .columns {
-    > div {
-      padding: 1rem 0;
-    }
-  }
-}
-
-@mixin circle($circleSize) {
-  width: $circleSize;
-  height: $circleSize;
-  -webkit-border-radius: $circleSize/2;
-  -moz-border-radius: $circleSize/2;
-  border-radius: $circleSize/2;
-}
-
-.pulse-container {
-  display: block;
-  position: absolute;
-  right: -2.3%;
-  top: -115%;
-  z-index: 1;
-}
-
-.pulse-box {
-  float: left;
-  width: 50%;
-  height: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* pulse in SVG */
-svg.pulse-svg {
-  overflow: visible;
-
-  .first-circle {
-    fill: $blue;
-    transform: scale(0.5);
-    transform-origin: center center;
-    animation: pulse-me 3s linear infinite;
-  }
-
-  .second-circle {
-    @extend .first-circle;
-
-    animation-delay: 1s;
-  }
-
-  .third-circle {
-    @extend .first-circle;
-
-    animation-delay: 2s;
-  }
-
-  .circle {
-    fill: $blue;
-  }
-}
-
-/* pulse in CSS */
-.pulse-css {
-  @include circle(50px);
-
-  background: tomato;
-  position: relative;
-
-  &::before,
-  &::after {
-    content: '';
-
-    @include circle(50px);
-
-    background-color: tomato;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    transform: scale(0.5);
-    transform-origin: center center;
-    animation: pulse-me 3s linear infinite;
-  }
-
-  &::after {
-    animation-delay: 2s;
-  }
-}
-
-@keyframes pulse-me {
-  0% {
-    transform: scale(0.5);
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 0.1;
-  }
-
-  70% {
-    opacity: 0.09;
-  }
-
-  100% {
-    transform: scale(5);
-    opacity: 0;
-  }
-}
-
-.edg-product-img {
-  img {
-    width: 317px;
-  }
-}
-
-.anchor-target {
-  position: relative;
-}
-
-.anchor-bottom {
-  position: absolute;
-  bottom: 0;
-}
-
-//Product Page
-.product-highlights {
-  max-width: 1024px;
-}
-
-.product-points-expanded {
-  list-style: none;
-  position: relative;
-  margin-top: 0;
-
-  > li {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-
-    &.active {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-
-  #point-1-info {
-    .hook-img {
-      width: 150px;
-    }
-
-    .orth-graphs {
-      img {
-        max-width: 260px;
-      }
-    }
-  }
-
-  #point-2-info {
-    top: 316px;
-  }
-
-  #point-3-info {
-    top: 430px;
-  }
-
-  #point-4-info {
-    top: 525px;
-  }
-
-  blockquote {
-    color: $blue;
-    font-weight: bold;
-    font-size: 18px;
-  }
-
-  h3 {
-    font-size: 24px;
-    line-height: 40px;
-  }
-
-  h4 {
-    margin-top: 0;
-  }
-}
-
-//For Healthcare Professionals
-.old-product {
-  .compare-image {
-    max-height: 630px;
-    margin-left: 50px;
-  }
-}
-
-.new-product {
-  .compare-image {
-    max-height: 630px;
-    margin-right: 50px;
-  }
-}
-
-.product-comparison-points {
-  .points-content {
-    background-color: transparent;
-  }
-}
-
-.points .points-title:nth-child(even) .row {
-  background-color: $blue;
-  color: $white;
-}
-
-.product-comparison-points .points {
-  background-color: transparent;
-  border: none;
-  text-align: center;
-
-  .points-title {
-    width: 100%;
-    float: none;
-    display: inline-block;
-    margin-left: -5px;
-    margin-bottom: 2rem;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    .h5 {
-      padding: 1rem;
-      margin: 0;
-    }
-  }
-
-  .points-title > a[aria-selected='true'] {
-    background-color: transparent;
-
-    .h5 {
-      color: $white;
-      background-color: $blue-dark;
-    }
-  }
-
-  .points-title > a:hover {
-    background-color: transparent;
-
-    .h5 {
-      background-color: $blue;
-      color: $white;
-    }
-  }
-}
-
-.points-title .h5 {
-  margin: 0 0.5rem;
-}
-
-.point-wrapper {
-  width: 300px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin-left: -150px;
-  height: 100%;
-  z-index: 10;
-}
-
-.point-wrapper {
-  .points {
-    .points-title {
-      float: none;
-    }
-  }
-}
-
-.image-close .product-intro img {
-  display: none;
-}
-
-.points-tip p {
-  margin-bottom: 1.5rem;
-  font-weight: bold;
-  font-size: 14px;
-  margin-top: 0;
-  color: $blue;
-  background-color: $white;
-}
-
-.reveal {
-  position: absolute;
-  top: 50% !important;
-  transform: translate(-50%, -50%);
-  left: 50%;
-}
-
-// About
-.about-header-p {
-  font-size: 20px;
-  margin-top: 3rem;
-  position: absolute;
-  background-color: white;
-  left: -4rem;
-  padding: 2.5rem;
-  box-shadow: 0 0 6px #333;
 }
 
 //Gravity Forms

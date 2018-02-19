@@ -2,7 +2,7 @@
 
 //Layout 
 body {
-  color: $black;
+  color: $gray;
 }
 
 button,
@@ -66,55 +66,6 @@ blockquote {
 }
 
 //General
-.blue {
-  background-color: $blue;
-}
-
-.orange {
-  background-color: $orange;
-}
-
-.white {
-  background-color: $white;
-}
-
-.blue-medium {
-  background-color: $blue-medium;
-}
-
-.blue-dark,
-.dark.blue {
-  background-color: $blue-dark;
-}
-
-.blue-gradient {
-  background: #212121;
-  background: -moz-linear-gradient(top, #212121 0%, #207cca 99%);
-  background: -webkit-linear-gradient(top, #212121 0%, #207cca 99%);
-  background: linear-gradient(to bottom, #212121 0%, #207cca 99%);
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#212121', endColorstr='#207cca', GradientType=0);
-}
-
-.gray {
-  background-color: $gray;
-}
-
-.brown {
-  background-color: $brown;
-}
-
-.green {
-  background-color: $green;
-}
-
-.earth-green {
-  background-color: $earth-green;
-}
-
-.yellow {
-  background-color: $yellow;
-}
-
 .gray {
   background-color: $gray;
 }
@@ -123,20 +74,27 @@ blockquote {
   background-color: $gray-light;
 }
 
-.blue-highlight {
-  background-color: $blue-highlight;
+.blue-dark {
+  background-color: $blue-dark;
 }
 
-.green-highlight {
-  background-color: $green-highlight;
+.blue-medium {
+  background-color: $blue-medium;
+}
+
+.blue {
+  background-color: $blue;
+}
+
+.blue-light {
+  background-color: $blue-light;
+}
+
+.off-white {
+  background-color: $off-white;
 }
 
 .blue,
-.orange,
-.brown,
-.green,
-.earth-green,
-.yellow,
 .gray {
   a {
     color: $white;
@@ -154,24 +112,24 @@ blockquote {
 }
 
 //Text
+.text-gray {
+  color: $gray;
+}
+
 .text-white {
   color: $white;
 }
 
-.text-green {
-  color: $green;
+.text-blue-dark {
+  color: $blue-dark;
+}
+
+.text-blue-medium {
+  color: $blue-medium;
 }
 
 .text-blue {
   color: $blue;
-}
-
-.text-orange {
-  color: $orange;
-}
-
-.text-blue-dark {
-  color: $blue-dark;
 }
 
 .underline {
@@ -192,38 +150,6 @@ blockquote {
 
 .lowercase {
   text-transform: lowercase;
-}
-
-.text-border {
-  position: relative;
-  padding: 0.8rem 1rem;
-  display: inline-block;
-
-  &::after {
-    content: ' ';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: url(../images/bracket-left.svg);
-    background-position: left top;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-  }
-
-  &::before {
-    content: ' ';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: url(../images/bracket-right.svg);
-    background-position: right top;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-  }
 }
 
 .border-top-left {
@@ -413,22 +339,6 @@ hr {
     background-color: rgba($blue, 0.7);
   }
 
-  &.brown {
-    background-color: rgba($brown, 0.7);
-  }
-
-  &.green {
-    background-color: rgba($green, 0.7);
-  }
-
-  &.earth-green {
-    background-color: rgba($earth-green, 0.7);
-  }
-
-  &.yellow {
-    background-color: rgba($yellow, 0.7);
-  }
-
   &.gray {
     background-color: rgba($gray, 0.7);
   }
@@ -443,6 +353,7 @@ hr {
   height: 100%;
   background-position: 50% 50%;
   background-size: cover;
+  background-repeat: no-repeat;
   z-index: 2;
 }
 
@@ -608,20 +519,19 @@ header.container {
 
 .close-button {
   span {
-    font-family: $font-family-header;
+    font-family: $font-family-text;
     padding: 1rem 1.6rem;
-    color: $white;
-    font-size: 40px;
+    color: $black;
+    font-size: 24px;
     vertical-align: sub;
   }
 }
 
 //Menu
-nav.off-canvas.position-right.is-open {
+nav.off-canvas {
   width: 100%;
   height: auto;
-  background-color: $blue;
-  padding: 4rem 0 8rem;
+  background-color: $white;
 
   .social-links {
     li {
@@ -636,14 +546,13 @@ nav.off-canvas.position-right.is-open {
   }
 
   .is-dropdown-submenu {
-    background-color: transparent;
+    background-color: $white;
     border: none;
   }
 
   ul {
     li {
       a {
-        color: $white;
         padding: 0.7rem 1rem;
       }
 
@@ -662,12 +571,18 @@ nav.off-canvas.position-right.is-open {
     circle,
     path,
     rect {
-      stroke: $white;
+      stroke: $gray;
     }
 
     .cls-3 {
-      fill: $white;
+      fill: $gray;
     }
+  }
+
+  &.is-open {
+    width: 100%;
+    height: 100vh;
+    padding: 4rem 0 8rem;
   }
 }
 
@@ -694,18 +609,19 @@ nav {
       list-style: none;
 
       a {
-        font-family: $font-family-header;
-        font-weight: 700;
+        font-family: $font-family-text;
+        font-weight: $font-weight-regular;
         text-transform: uppercase;
+        color: $black;
 
         &:hover {
-          color: $blue-dark;
+          color: $blue;
         }
       }
 
       &.current-menu-item {
         a {
-          color: $blue-dark;
+          color: $blue;
         }
       }
     }
@@ -753,95 +669,13 @@ nav {
     margin-bottom: 40px;
   }
 
-  .edg-wrapper {
-    position: relative;
-    z-index: 0;
-
-    img {
-      position: relative;
-      z-index: 3;
-    }
-  }
-}
-
-#home-animation {
-  video,
-  canvas {
-    width: 100%;
-    height: auto;
-  }
-}
-
-.home-points {
-  position: relative;
-
-  .columns {
-    p {
-      margin-top: 0;
-      font-size: 20px;
-    }
-
-    &:last-child {
-      border-right: none;
-    }
+  .button {
+    margin-top: 0;
   }
 }
 
 .pulse-container {
   display: none;
-}
-
-.addition-row {
-  .item {
-    display: block;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    text-align: center;
-
-    .va-middle {
-      > div {
-        display: inline-block;
-        text-align: center;
-        padding-top: 6px;
-      }
-    }
-  }
-
-  .addition,
-  .result {
-    font-size: 20px;
-  }
-
-  .plus,
-  .equals {
-    font-size: 38px;
-    font-weight: normal;
-  }
-
-  .outline .va-middle > div {
-    position: relative;
-
-    &::before {
-      position: absolute;
-      top: 0;
-      width: 65px;
-      content: '';
-      background-color: rgba(255, 255, 255, 0.3);
-      height: 1px;
-      left: 50%;
-      margin-left: -32.5px;
-    }
-  }
-
-  .va-middle {
-    padding: 0;
-  }
-
-  .columns {
-    > div {
-      padding: 1rem 0;
-    }
-  }
 }
 
 //content sections
@@ -919,7 +753,7 @@ article {
   h4 {
     color: $black;
     text-transform: initial;
-    font-weight: normal;
+    font-weight: $font-weight-regular;
   }
 
   li {
@@ -966,7 +800,7 @@ article {
       height: 30px;
       border: 2px solid #ddd;
       color: #ddd;
-      font-weight: bold;
+      font-weight: $font-weight-bold;
       border-radius: 50%;
       display: inline-block;
       text-align: center;
@@ -989,7 +823,7 @@ article {
 
   h4 {
     color: $blue;
-    font-weight: normal;
+    font-weight: $font-weight-regular;
   }
 }
 
@@ -1049,7 +883,7 @@ article {
       width: 30px;
       height: 30px;
       color: $blue-dark;
-      font-weight: bold;
+      font-weight: $font-weight-bold;
     }
   }
 
@@ -1085,156 +919,6 @@ article {
 
 .other-products .block-content {
   background-color: rgba(243, 143, 30, 0.8);
-}
-
-//Healthcare Professionals Page
-.old-product {
-  .compare-image {
-    max-height: 300px;
-  }
-}
-
-.new-product {
-  .compare-image {
-    max-height: 300px;
-  }
-}
-
-.comparison-title {
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-}
-
-.point-left,
-.point-right {
-  position: relative;
-}
-
-.solution-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  line-height: 30px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  border: 1px solid $white;
-  border-top: none;
-  border-left: none;
-  text-align: center;
-  color: $white;
-  text-transform: uppercase;
-}
-
-.compare-product-text h3 {
-  text-transform: initial;
-  font-weight: normal;
-}
-
-.point-content {
-  visibility: hidden;
-  height: 0;
-  overflow: hidden;
-}
-
-.point-content.expanded {
-  visibility: visible;
-  height: 100%;
-  overflow: visible;
-}
-
-.toggle-point {
-  cursor: pointer;
-}
-
-.arrow-right {
-  width: 0;
-  height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 20px solid $white;
-  position: absolute;
-  top: 50%;
-  margin-top: -20px;
-
-  &.gray-light {
-    background-color: transparent;
-    border-left-color: $gray-light;
-  }
-}
-
-.point-image-column-left img {
-  padding-left: 3rem;
-  padding-bottom: 2rem;
-  padding-right: 1rem;
-}
-
-.point-image-column-right {
-  padding-right: 3rem !important;
-  padding-bottom: 2rem !important;
-}
-
-.padding-horizontal-large .columns {
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-
-.point-product {
-  font-size: 14px;
-  font-weight: normal;
-}
-
-.product-comparison-points {
-  position: relative;
-
-  .tabs-panel {
-    padding: 0;
-  }
-}
-
-.point-wrapper {
-  .tabs {
-    border: none;
-    background: transparent;
-
-    .tabs-title {
-      > a {
-        padding: 0;
-      }
-    }
-  }
-
-  .va-middle {
-    padding: 0;
-  }
-}
-
-.points-title {
-  .h5 {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    border-bottom: 1px solid $white;
-  }
-}
-
-.points .points-title:nth-child(even) .row {
-  background-color: $white;
-  color: $blue;
-}
-
-.product-comparison {
-  blockquote {
-    font-weight: bold;
-    color: $blue-dark;
-    font-size: 20px;
-  }
-}
-
-.reveal-overlay {
-  .close-button span {
-    color: $gray;
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
 
 //Gravity Forms
@@ -1293,6 +977,38 @@ article {
 
 // Footer
 #footer {
+  .contact-info .h3 {
+    margin-top: 0;
+    line-height: 2.4rem;
+
+    .small {
+      font-weight: normal;
+      font-family: $font-family-text;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+  }
+
+  .contact-link {
+    margin-top: 0;
+
+    a {
+      color: $white;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+  }
+
+  .address {
+    padding-left: 1rem;
+    border-left: 1px solid $white;
+
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
   .brand {
     img {
       padding: 1rem;
@@ -1300,16 +1016,20 @@ article {
     }
   }
 
-  #menu-primary-1 {
-    margin-left: 1rem;
+  h3 {
+    font-size: 16px;
+    line-height: 1.525;
+    font-family: $font-family-text;
+  }
 
-    li a {
-      text-decoration: none;
-      font-weight: bold;
-    }
+  .menu {
+    flex-direction: column;
 
-    .sub-menu {
-      display: none;
+    li {
+      a {
+        color: $white;
+        padding-left: 0;
+      }
     }
   }
 }

@@ -1,14 +1,16 @@
 <footer id="footer" class="content-info">
-	<section id="footer-contact" class="full-width text-white blue">
-		<div class="row">
-			<div class="column small-12 medium-8 large-9 footer-address block vertical-full margin-top-medium margin-bottom-medium">
-				<a class="brand" href="{{ home_url('/') }}"><img class="white" alt="{{ get_bloginfo('name', 'display') }}" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo@2x-100.png"></a>
-
-				<p class="footer-links"><a class="button" title="contact" href="<?php echo get_page_link(13); ?>">Contact</a></p>
-
-			</div>
-			<div class="column small-12 medium-4 large-3 margin-top-medium">
-				<h4>Follow Us</h4>
+	<section id="footer-content" class="full-width text-white gray-light">
+		<div class="row expanded">
+			<div class="column small-12 large-3 margin-top-medium margin-bottom-medium">
+				<div class="contact-info">
+					<p class="h3 phone">858.272.3615</p>
+					<p class="h3 phone">866.560.6411 <span class="small">toll free</span></p>
+					<p class="contact-link"><a href="mail:support@acoustic-curtains.com">support@acoustic-curtains.com</a> | <a href="<?php echo get_site_url('/contact'); ?>">Contact</a></p>
+				</div>
+				<div class="address margin-top-small margin-bottom-small">
+					<p>Quiet Curtains</p>
+					<p>San Diego, CA 92127</p>
+				</div>
 				<ul class="inline-list social-list">
 				<li>
 				      <a target="_blank" title="LinkedIn" href="//www.linkedin.com/company/10368714/"><img alt="LinkedIn" src="@asset('images/linkedin.svg')"></a>  
@@ -16,16 +18,30 @@
 			    <li>
 				    <a target="_blank" title="You Tube" href="//www.youtube.com/channel/UCnhZDeGhjsF-b_oEjLEzNuQ/videos"><img alt="You Tube" src="@asset('images/youtube.svg')"></a> 
 				  </li>
-				  </ul>
+				 </ul>
+			</div>
+			<div class="column small-12 large-5 margin-top-medium margin-bottom-medium footer-nav">
+				<div class="row">
+					<?php if ( is_active_sidebar( 'sidebar-footer-menu-column-1' ) ) { ?>
+						<div class="columns small-12 medium-6">
+							<?php dynamic_sidebar( 'sidebar-footer-menu-column-1' ); ?>
+						</div>
+					<?php } ?>
+					<?php if ( is_active_sidebar( 'sidebar-footer-menu-column-2' ) ) { ?>
+						<div class="columns small-12 medium-6">					
+							<?php dynamic_sidebar( 'sidebar-footer-menu-column-2' ); ?>
+						</div>
+					<?php } ?>
 				</div>
 			</div>
+			<div class="column small-12 large-4 margin-top-medium margin-bottom-medium">
+				<h3>Promotions and Soundproofing Tips</h3>
+			</div>
 	</section>
-	<section id="footer-copyright" class="full-width text-white blue-dark">
-		<div class="row">
-			<div class="column">
-				<div class="small-12">
-					<p class="margin-top-small margin-bottom-small">&copy; 2017 Edge Surgical All Rights Reserved</p>
-				</div>
+	<section id="footer-copyright" class="full-width text-white gray-light">
+		<div class="row expanded">
+			<div class="column small-12">
+				<p class="margin-top-small margin-bottom-small">&copy; <?php echo date("Y"); ?> Quiet Curtains All Rights Reserved</p>
 			</div>
 		</div>
 	</section>

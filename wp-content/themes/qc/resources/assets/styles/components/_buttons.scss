@@ -4,7 +4,7 @@ a.button,
 .button,
 input.button {
   padding: 0.8rem 1rem;
-  font-family: $font-family-header;
+  font-family: $font-family-text;
   text-transform: uppercase;
   font-weight: 800;
   font-size: 18px;
@@ -12,27 +12,33 @@ input.button {
   line-height: 18px;
   text-decoration: none;
 
-  &.button-outline {
+  &.outline {
     background-color: transparent;
-    border: 2px solid $white;
-    border-radius: 8px;
+    border: 2px solid $blue-dark;
+    border-radius: 30px;
+    color: $blue-dark;
+  }
+
+  &.blue {
+    color: $white;
+    border-radius: 30px;
   }
 }
 
 button.navigation-button {
-  color: $black;
+  color: $gray;
   background-color: transparent;
 
   &:hover,
   &:focus {
     background-color: transparent;
-    color: $black;
+    color: $gray;
   }
 
   .button-text {
-    font-family: $font-family-header;
-    font-weight: 800;
+    font-family: $font-family-text;
     font-size: 18px;
+    font-weight: normal;
   }
 }
 

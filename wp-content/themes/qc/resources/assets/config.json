@@ -11,8 +11,8 @@
       "./styles/admin.scss"
     ]
   },
-  "publicPath": "/wp-content/themes/edge",
-  "devUrl": "http://localhost/edge",
+  "publicPath": "/wp-content/themes/qc",
+  "devUrl": "http://localhost/qc",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [

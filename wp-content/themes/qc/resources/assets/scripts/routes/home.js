@@ -6,7 +6,5 @@ export default {
   },
   finalize() {
     // JavaScript to be fired on the home page, after the init JS
-    //Transparent Video display
-    var transparentVideo = seeThru.create('#transparent-video', {end: 'loop', poster: true});  
   },
 };

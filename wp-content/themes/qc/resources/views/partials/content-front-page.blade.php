@@ -2,8 +2,9 @@
   <?php if( have_rows('slider_fields') ): ?>
 	<div id="home-slider" class="page-header-slider slider full-height"> 
 		<?php while ( have_rows('slider_fields') ) : the_row(); ?>
-		<div class="slide vertical-full blue-dark <?php if(get_sub_field('background_color')!='white') { echo 'text-white';} ?>">
-			<div class="scroll-in fade-in" id="hero-background"></div>
+		<div class="slide vertical-full blue-dark <?php if(get_sub_field('background_color')!='white') { echo 'text-white';} ?>" >
+			<div class="scroll-in fade-in" style="<?php if(get_sub_field('image')) { echo 'background: url(' . get_sub_field('image') . ');';} ?>" id="hero-background"></div>
+			style="background:url();"
 	    	<div id="hero-content" class="va-container" role="main">
           	<section class="va-middle" itemprop="articleBody">
           		<div class="hero-slider-content-wrap">
