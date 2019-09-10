@@ -13,6 +13,14 @@ $spacing: (extra-small: 0.5rem, small: 1rem, medium: 2rem, large: 4rem, extra-la
 }
 
 @each $name, $value in $spacing {
+  .padding-top-#{$name} {
+    padding-top: $value !important;
+  }
+
+  .padding-bottom-#{$name} {
+    padding-bottom: $value !important;
+  }
+
   .padding-#{$name} {
     padding: $value !important;
   }
@@ -21,13 +29,16 @@ $spacing: (extra-small: 0.5rem, small: 1rem, medium: 2rem, large: 4rem, extra-la
 // Colors
 $black: #212121;
 $gray: #3f3f3f;
-$gray-light: #819097;
+$gray-medium: #819097;
+$gray-light: #e2e5e7;
+$gray-lighter: #dadada;
 $blue-dark: #10487a;
 $blue-medium: #457fa0;
 $blue: #0aa5e8;
 $blue-light: #b8e3f4;
 $off-white: #f2f4f4;
 $salmon: #e0bfbd;
+$red: #ff1950;
 
 //Font Sizes
 $small-font: 18px;

@@ -1,114 +1,232 @@
 <article>
-<section class="text-section product-header full-height <?php if(get_field('product_header_background_color')) { the_field('product_header_background_color'); } ?>">
-	<?php if(get_field('product_header')): ?>
-		<?php the_field('product_header'); ?>
-	<?php endif; ?>
-</section>
-<section id="product-highlights" class="margin-top-large margin-bottom-large">
-	<div class="row title-row">
-		<div class="columns small-12">
-			<h2 class="text-blue-dark text-center margin-bottom-medium h3">Product Highlights</h2>
-		</div>
-	</div>
-	<div class="row large-collapse product-highlights">
-		<div class="small-12 large-2 large-push-5 columns product-image-column">
-			<div class="product-highlight-image-container text-center">
-				<img style="width: 80px;" class="product-highlight-image" src="<?php echo site_url('wp-content/uploads/2017/10/edge-vertical.png'); ?>" alt="product-image">
-			</div>
-		</div>
-		<div class="small-12 large-5 end large-pull-2 columns product-points-column">
-			<ol class="product-points">
-				<li id="point-1" class="active">
-					<h3 class="h4">Optimized Hook Design<div class="point-line"></div></h3>
-					<div class="small-points hide-for-large">
-						<img class="hook-img" src="<?php echo site_url('wp-content/uploads/2018/01/edg-hook@2x.png'); ?>" alt="Edg Ortho Hook">
-						<h4>With ~ 5x’s greater hook surface area for greater purchase</h4>
-					</div>
-				</li>
-				<li id="point-2">
-					<h3 class="h4">Easy-to-Read Digital Display<div class="point-line"></div></h3>
-					<div class="small-points hide-for-large">
-						<h3>Accurate and Precise</h3>
-						<h4>With electronic measurement and sub-millimeter precision, no more guessing the measurement</h4>
-					</div>
-				</li>
-				<li id="point-3">
-					<h3 class="h4">Ability to HOLD Measurement<div class="point-line"></div>
-					</h3>
-					<div class="small-points hide-for-large">
-						<h3>Drive Consistency</h3>
-						<h4>Can’t see the LCD display due to blood or tissue obstruction?  No problem!</h4>
-					</div>
-
-				</li>
-				<li id="point-4">
-					<h3 class="h4">Single Use
-					</h3>
-					<div class="small-points hide-for-large">
-						<h3>Mitigate Infection Risk</h3>
-						<h4>- No more infection risk from dirty depth gauges</h4>
-						<h4>- New Hook and Probe each use</h4>
-					</div>										
-				</li>						
-			</ol>	
-			<div id="fda-510k">
-				<img width="180" height="77" src="<?php echo site_url('wp-content/uploads/2017/11/FDA_Logo-blue.gif'); ?>" alt="FDA 510(k) Cleared">
-			</div>	
-		</div>
-		<div class="columns large-5 show-for-large">
-			<ul class="product-points-expanded">
-				<li id="point-1-info" class="active">
-					<img class="hook-img" src="<?php echo site_url('wp-content/uploads/2018/01/edg-hook@2x.png'); ?>" alt="Edg Ortho Hook">
-					<h3>Optimized Hook Design</h3>
-					<h4>With ~ 5x’s greater hook surface area for greater purchase</h4>
-				</li>
-				<li id="point-2-info">
-					<h3>Accurate and Precise</h3>
-					<h4>With electronic measurement and sub-millimeter precision, no more guessing the measurement</h4>
-				</li>
-				<li id="point-3-info">
-					<h3>Drive Consistency</h3>
-					<h4>Can’t see the LCD display due to blood or tissue obstruction?  No problem!</h4>
-				</li>
-				<li id="point-4-info">
-					<h3>Mitigate Infection Risk</h3>
-					<h4>- No more infection risk from dirty depth gauges</h4>
-					<h4>- New Hook and Probe each use</h4>
-				</li>
-			</ul>
-		</div>
-	</div>
-</section>
-<section class="product-cta blue-dark text-white">
-	<div class="row">
-		<div class="columns small-12 text-center margin-top-extra-large margin-bottom-extra-large">
-			<h2>Give Yourself the EDGe<sup>&trade;</sup></h2>
-			<a href="<?php echo site_url('order'); ?>" class="button blue">Order Today</a>
-		</div>
-	</div>
-</section>
-<section class="other-products">
-	<div class="row">
-		<div class="column small-12 large-4 large-offset-4 end text-center margin-top-large margin-bottom-large text-blue-dark">
-			<h3>Next Generation Products</h3>
-		</div>
-	</div>
-	<div class="row">
-		<div class="column block small-12 large-4 large-offset-4 end text-center vertical-full orange text-white margin-bottom-large">
-			<div class="block-wrap aspect-3-2 block-background">
-				<div class="block-image" style="background-image: url(<?php echo site_url('wp-content/uploads/2017/12/edge-spine.jpg'); ?>);"></div>
-				<div class="block-content">
-					<div class="va-container">
-						<div class="va-middle">
-							<h3>EDG<sup>&reg;</sup> Spine</h3>
-							<p>Coming Soon</p>
+<?php /*Dynamic Sections */ ?>
+@if ( have_rows('sections') )
+	<?php while ( have_rows('sections') ) : the_row(); ?>
+		<?php if( get_row_layout() == 'one_column' ): ?>
+			<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" data-magellan-target="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="<?php if(get_sub_field('class')) { the_sub_field('class'); } ?>">
+				<div class="container">
+					<div class="row">
+						<div class="columns small-12 large-8 large-offset-2">
+							<?php the_sub_field('column_content'); ?>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-</section>
+			</section>
+		<?php elseif(get_row_layout() == 'logos_section'): ?>
+			<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" data-magellan-target="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="logos-section <?php if(get_sub_field('class')) { the_sub_field('class'); } ?>">
+				<div class="container">
+				<div class="row gutter-small align-middle small-up-2 medium-up-3 large-up-6 logos" data-equalizer>
+				<?php
+		   		// loop through the rows of data
+				while ( have_rows('logos_content') ) : the_row();
+		        if( get_row_layout() == 'logo' ):
+		        ?>
+      			<div class="column column-block" data-equalizer-watch>
+		      		<div class="va-container">
+		      			<div class="va-middle">
+		      		<?php
+		      		$image = get_sub_field('logo_image');
+		      		if(!empty($image)): ?>
+		      			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" >
+		      		<?php endif; ?>
+		      			</div>
+		      		</div>
+        		</div>
+		        <?php
+		        endif;
+		    	endwhile;
+				?>
+				</div>
+				</div>
+			</section>
+		<?php elseif( get_row_layout() == 'solid_background' ): ?>
+			<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" data-magellan-target="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="text-solid-section <?php the_sub_field('background_color'); ?> <?php if(get_sub_field('background_color')!='white') { echo 'text-white';} ?>">
+				<div class="row">
+					<div class="column small-12 medium-8 medium-offset-2 large-6 large-offset-3 margin-top-large margin-bottom-large">
+						<?php the_sub_field('content'); ?>
+					</div>
+				</div>
+			</section>
+		<?php elseif( get_row_layout() == 'image_background' ): ?>
+			<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" data-magellan-target="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="text-background-section text-white">
+				<div class="block">
+					<div class="block-wrap block-background aspect-2-1">
+						<div class="block-image" style="background: url(<?php the_sub_field('image') ?>)">
+						</div>
+						<div class="block-content">
+							<div class="va-container">
+							<div class="va-middle">
+							<div class="container">
+								<div class="row">
+									<div class="column small-12 medium-8 medium-offset-2 large-6 large-offset-3">
+										<?php the_sub_field('content') ?>
+									</div>
+								</div>
+							</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		<?php elseif( get_row_layout() == 'two_column' ): ?>
+			<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" data-magellan-target="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="container background-section <?php if(get_sub_field('class')) { the_sub_field('class'); } ?>" <?php if(get_sub_field('background_image')) { ?> style="background:url(<?php the_sub_field('background_image'); ?>)" <?php } ?>>
+				@if(get_sub_field('header'))
+					<div class="section-header">
+						<?php the_sub_field('header'); ?>
+					</div>
+				@endif
+				<div class="row">
+					<?php if( have_rows('column') ):
+ 						// loop through the rows of data
+    					while ( have_rows('column') ) : the_row(); ?>
+						<div class="column small-12 medium-6 <?php if(get_sub_field('class')) { the_sub_field('class'); } ?> @if(get_sub_field('background_image')) block @endif ">
+							@if(get_sub_field('background_image'))
+							<div class="block-wrap aspect-3-2">
+							@endif
+
+							@if (get_sub_field('background_image'))
+							<div style="background-image: url(<?php the_sub_field( 'background_image' ); ?> );" class="block-image">
+							</div>
+							@endif
+							<div class="column-content <?php if(get_sub_field('background_image')) { echo "block-content"; }  ?>">
+							@php(the_sub_field('column_content'))
+							</div>
+
+							@if(get_sub_field('background_image'))
+							</div>
+							@endif
+						</div>
+					<?php
+						endwhile;
+						endif;
+					?>
+				</div>
+			</section>
+		<?php elseif( get_row_layout() == 'three_column' ): ?>
+			<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" data-magellan-target="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="container <?php if(get_sub_field('class')) { the_sub_field('class'); } ?>">
+				<div class="row">
+					<?php if( have_rows('column') ):
+ 						// loop through the rows of data
+    					while ( have_rows('column') ) : the_row(); ?>
+						<div class="column small-12 medium-4 @if(get_sub_field('background_image')) block @endif">
+							@if(get_sub_field('background_image'))
+							<div class="block-wrap aspect-3-2">
+							@endif
+
+							@if (get_sub_field('background_image'))
+							<div style="background-image: url(<?php the_sub_field( 'background_image' ); ?> );" class="block-image">
+							</div>
+							@endif
+							<div class="column-content <?php if(get_sub_field('background_image')) { echo "block-content"; }  ?>">
+							@php(the_sub_field('column_content'))
+							</div>
+
+							@if(get_sub_field('background_image'))
+							</div>
+							@endif
+						</div>
+					<?php
+						endwhile;
+						endif;
+					?>
+				</div>
+			</section>
+		<?php elseif(get_row_layout() == 'testimonials_section'): ?>
+			<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" data-magellan-target="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="testimonials container padding-top-small padding-bottom-medium blue-light <?php if(get_sub_field('class')) { the_sub_field('class'); } ?>">
+				<div class="row">
+					<div class="columns small-12 large-10 large-offset-1">
+					<div class="testimonial-slider">
+					<?php while(have_rows('testimonial')): the_row(); ?>
+						<div class="slide">
+							@if (get_sub_field('testimonial_image'))
+								<div class="testimonial-image"><img src="<?php the_sub_field('testimonial_image'); ?>"></div>
+							@endif
+							<p class="testimonial-name text-blue-dark">
+								<?php the_sub_field('testimonial_name'); ?>
+							</p>
+							<div class="testimonial-content">
+								<?php the_sub_field('testimonial_content'); ?>
+							</div>
+						</div>
+					<?php endwhile; ?>
+					</div>
+					</div>
+				</div>
+			</section>
+		<?php elseif(get_row_layout() == 'product_header_section'): ?>
+			<section id="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" data-magellan-target="<?php echo sanitize_title_with_dashes(get_sub_field('id')); ?>" class="container padding-top-large padding-bottom-large product-header <?php if(get_sub_field('class')) { the_sub_field('class'); } ?>">
+				<div class="row">
+					<div class="columns small-12 large-7">
+						<div class="product__slider-main">
+						<?php
+						while(have_rows('product_images')): the_row();
+							$image = get_sub_field('product_image');
+							if(!empty($image)): ?>
+			      			<div class="slide">
+			      				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" >
+			      			</div>
+						<?php endif; ?>
+						<?php endwhile; ?>
+						</div>
+						<?php
+							$row_count = count(get_sub_field('product_images'));
+						?>
+
+						<div class="product__slider-thmb" data-count="<?php echo $row_count; ?>">
+						<?php
+						//reset_rows();
+						while(have_rows('product_images')): the_row();
+							$image = get_sub_field('product_image');
+							//echo '<pre>';
+								//var_dump( $image );
+							//echo '</pre>';
+							if(!empty($image)): ?>
+			      			<div class="slide">
+			      				<?php echo wp_get_attachment_image( $image['id'], 'thumbnail' ); ?>
+			      			</div>
+							<?php endif; ?>
+						<?php endwhile; ?>
+						</div>
+					</div>
+					<div class="columns small-12 large-5">
+						<?php if(get_sub_field('product_title')): ?>
+						<h1 class="h3 text-blue-medium product-title text-center"><?php the_sub_field('product_title'); ?></h1>
+						<?php endif; ?>
+						<div class="product-description">
+							<?php the_sub_field('product_description'); ?>
+						</div>
+						<div class="row product-cta padding-top-small" data-equalizer>
+							<div class="columns small-6" data-equalizer-watch>
+								<div class="va-container">
+									<div class="va-middle text-center">
+										<a class="button blue" href="<?php the_sub_field('button_link'); ?>"><?php the_sub_field('button_text'); ?></a>
+
+										@if(get_sub_field('product_button_description'))
+											<p class="product-button-description"><?php the_sub_field('product_button_description'); ?></p>
+										@endif
+									</div>
+								</div>
+							</div>
+							<div class="columns small-6 text-center" data-equalizer-watch>
+								<div class="va-container">
+									<div class="va-middle">
+										<p>or call</p>
+										<a class="product-number" href="tel:8582723615">858.272.3615</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		<?php else:
+			// no layouts found
+		?>
+		<?php endif; ?>
+	<?php endwhile; ?>
+@endif
+
 
 
 @php(the_content())

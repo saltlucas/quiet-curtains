@@ -5,6 +5,10 @@ nav.off-canvas {
   padding: 4rem 0 8rem;
 }
 
+.dropdown.menu.vertical > li.opens-right > .is-dropdown-submenu {
+  display: block;
+}
+
 .block.vertical-full {
   .block-wrap {
     min-height: auto;
@@ -28,6 +32,14 @@ nav.off-canvas {
       padding-bottom: 2rem;
     }
   }
+}
+
+.val-content-row > .column {
+  margin-top: 2rem;
+}
+
+.val-icon {
+  padding-bottom: 1rem;
 }
 
 #hero-content h1 {

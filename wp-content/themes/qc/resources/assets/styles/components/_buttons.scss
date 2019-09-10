@@ -8,9 +8,12 @@ input.button {
   text-transform: uppercase;
   font-weight: 800;
   font-size: 18px;
-  margin: 1rem 0 0;
+  margin: 0;
   line-height: 18px;
   text-decoration: none;
+  border-radius: 30px;
+  background-color: $blue;
+  color: $white;
 
   &.outline {
     background-color: transparent;
@@ -19,8 +22,20 @@ input.button {
     color: $blue-dark;
   }
 
+  &.outline-white {
+    background-color: transparent;
+    border: 2px solid $white;
+    border-radius: 30px;
+    color: $white;
+  }
+
   &.blue {
     color: $white;
+    border-radius: 30px;
+  }
+
+  &.blue-dark {
+    background-color: $blue-dark;
     border-radius: 30px;
   }
 }
@@ -90,10 +105,4 @@ header.container.is-stuck .dropdown.menu .menu-button {
     line-height: initial;
     padding: 0.5rem 1rem;
   }
-}
-
-.button[type='submit'] {
-  font-size: 18px;
-  line-height: 18px;
-  border-radius: 0;
 }

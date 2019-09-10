@@ -1,0 +1,44 @@
+.collapsible-sections-field-description-setting {
+  display: none; }
+
+/*
+.collapsible-sections-setting-title,
+.collapsible-sections-setting-description-inside {
+	display: none;
+}
+
+.toplevel_page_gf_edit_forms .collapsible-sections-admin-field {
+
+	.collapsible-sections-setting-title,
+	.collapsible-sections-setting-description-inside {
+		display: block !important;
+	}
+
+}
+*/
+.gsection_collapsible {
+  margin: 16px 0 -8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.7em; }
+  .gsection_collapsible span {
+    display: inline-block;
+    padding: 1px 6px 0;
+    border-radius: 3px;
+    background-color: #ccc;
+    color: grey; }
+
+.gfield.field_selected .gsection_collapsible span,
+.gfield.field_hover .gsection_collapsible span {
+  background-color: #D2E0EB;
+  color: #47759B; }
+
+#gf_collapsible_sections_custom_css_global,
+#gf_collapsible_sections_custom_css {
+  display: none; }
+
+#gf_collapsible_sections_custom_css_global_editor,
+#gf_collapsible_sections_custom_css_editor {
+  position: relative;
+  width: 100%;
+  height: 400px; }

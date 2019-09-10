@@ -1,1 +1,9 @@
 // X Large Only
+.quote-column {
+  .quote-content {
+    &::after {
+      right: -40px;
+      transform: none;
+    }
+  }
+}

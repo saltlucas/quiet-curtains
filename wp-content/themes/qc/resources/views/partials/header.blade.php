@@ -1,5 +1,5 @@
 <div class="sticky-container" data-sticky-container>
-<header class="container sticky" data-sticky data-margin-top="0" data-stikcy-on="large" data-btm-anchor="footer:top">
+<header class="sticky" data-sticky data-margin-top="0" data-sticky-on="large" data-btm-anchor="footer:top">
     <div class="clearfix">
         <div class="nav-logo float-left">
         <a class="brand" href="{{ home_url('/') }}"><img alt="{{ get_bloginfo('name', 'display') }}" style="max-height: 55px;" src="@asset('images/Logo.svg')"></a>
@@ -7,13 +7,13 @@
         <div class="nav-toggle hide-for-large">
             <div class="button-container">
                 <button type="button" data-toggle="nav-primary" data-toggle="nav-primary" class="navigation-button button">
-                    <div class="menu-icon"></div>    
-                    <span class="button-text">Menu</span>                           
+                    <div class="menu-icon"></div>
+                    <span class="button-text">Menu</span>
                 </button>
             </div>
         </div>
-        <div class="nav-menu float-left">
-            <nav id="nav-primary" class="nav-primary off-canvas in-canvas-for-large position-right" data-off-canvas>
+        <div class="nav-menu float-left hide-on-load">
+            <nav id="nav-primary" class="nav-primary off-canvas reveal-for-large in-canvas-for-large position-right" data-off-canvas>
             <button class="close-button hide-for-large" aria-label="Close menu" type="button" data-close="">
               <span aria-hidden="true">×</span>
             </button>
@@ -28,3 +28,8 @@
     </div>
 </header>
 </div>
+<?php if(!is_front_page()): ?>
+<section id="header-line" class="text-center blue-dark text-white padding-top-small padding-bottom-small">
+    <p class="header-text">Lab Tested Field Proven</p>
+</section>
+<?php endif; ?>

@@ -5,8 +5,8 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 Tags: SEO, XML sitemap, Google Search Console, Content analysis, Readability
 Requires at least: 4.8
-Tested up to: 4.9.2
-Stable tag: 6.2
+Tested up to: 4.9.5
+Stable tag: 7.5.1
 Requires PHP: 5.2.4
 
 Improve your WordPress SEO: Write better content and have a fully optimized WordPress site using the Yoast SEO plugin.
@@ -15,7 +15,7 @@ Improve your WordPress SEO: Write better content and have a fully optimized Word
 
 ### Yoast SEO: the #1 WordPress SEO plugin
 
-Need an SEO plugin that helps you reach for the stars? Yoast SEO is the original WordPress SEO plugin since 2008. It is the favorite tool of millions of users, ranging from the bakery around the corner to some of the most popular sites on the planet. With Yoast SEO, you get a solid toolset that helps you aim for that number one spot in the search results. Yoast: SEO for everyone.
+Need some help with your search engine optimization? Need an SEO plugin that helps you reach for the stars? Yoast SEO is the original WordPress SEO plugin since 2008. It is the favorite tool of millions of users, ranging from the bakery around the corner to some of the most popular sites on the planet. With Yoast SEO, you get a solid toolset that helps you aim for that number one spot in the search results. Yoast: SEO for everyone.
 
 Yoast SEO does everything in its power to please both visitors and search engine spiders. How? Below you’ll find a small sampling of the powers of Yoast SEO:
 
@@ -62,7 +62,7 @@ Bug reports for Yoast SEO are [welcomed on GitHub](https://github.com/Yoast/word
 
 ### Further Reading
 
-For more info, check out the following articles:
+For more info on search engine optimization, check out the following:
 
 * The [Yoast SEO Plugin](https://yoa.st/1v8) official homepage.
 * The [Yoast SEO Knowledgebase](https://yoa.st/1va).
@@ -98,57 +98,69 @@ You'll find answers to many of your questions on [kb.yoast.com](https://yoa.st/1
 == Screenshots ==
 
 1. The Yoast SEO plugin general meta box. You'll see this on edit post pages, for posts, pages and custom post types.
-2. The fully configurable XML sitemap for Yoast SEO.
-3. Easily import SEO data from other SEO plugins like All In One SEO pack, HeadSpace2 SEO and wpSEO.de.
-4. Example of the SEO analysis functionality.
-5. Example of the readability analysis functionality.
-6. The advanced section of the Yoast SEO meta box.
+2. Example of the SEO analysis functionality.
+3. Example of the readability analysis functionality.
+4. Overview of site-wide SEO problems and possible improvements.
+5. Control over which features you want to use.
+6. Easily import SEO data from other SEO plugins like All In One SEO pack, HeadSpace2 SEO and wpSEO.de.
 
 == Changelog ==
 
-= 6.2.0 =
-Release Date: January 23rd, 2018
+= 7.5.1 =
+Release Date: May 16th, 2018
+
+Bugfixes:
+* Fixes a bug where the auto-generating of the slug did not work as expected due to persisting of the post name too agressively.
+
+= 7.5.0 =
+Release Date: May 15th, 2018
 
 Enhancements:
-
-* Allows more strings to be translated.
-* Adds the passive voice assessment for French.
-* Adds the passive voice assessment for Spanish.
-* Simplifies the feedback message for the assessment that checks whether subheadings contain the keyword.
+* Adds readability analysis for Russian.
+* Improves accessibility.
 
 Bugfixes:
+* Fixes a bug where images with specific aspect ratios where removed from OpenGraph consideration. This was causing unexpected results with Facebook sharing. The aspect ratio check has been removed completely.
+* Fixes a bug where sentences ending in multiple sentence marks, exclamation marks or ellipses were treated as multiple sentences.
+* Fixes a bug where attempting to get Yoast SEO options in multi-site, would result in wrong values being returned.
+* Fixes a bug where the sitemap styling could not be loaded when the Site domain differs from the Admin domain.
+* Fixes a bug where the admin bar still used old copy: Dashboard has been renamed to General.
 
-* Security hardening through stricter code checks.
-* Reduces the number of times the content analysis is refreshed on page load.
-* Fixes a bug where relative URLs were not counted as internal links in the internal link assessment.
-* Fixes a bug where Premium users would be shown ads when following a certain path through the SEO menu.
-* Fixes a bug where the method of setting the title and meta description templates for the WooCommerce shop page would not work anymore.
-
-= 6.1.1 =
-Release Date: January 10th, 2018
+= 7.4.2 =
+Release Date: May 3rd, 2018
 
 Bugfixes:
+* Fixes automatic image size detection for OpenGraph images. When an image was used that was too large, we wouldn't output the `og:image` tag. That is now fixed.
+* Fixes a bug where portrait images where not allowed for the OpenGraph image.
 
-* Fixes a bug where sitemaps could not be generated when there one or more galleries in the content.
 
-= 6.1.0 =
-Release Date: January 9th, 2018
+= 7.4.1 =
+Release Date: May 2nd, 2018
+
+Bugfixes:
+* Re-adds `wpseo_opengraph_image_size` filter. This will completely override any automatic size determination our code does. This filter now also applies to all ways an `og:image` can be determined: In the content, as a featured image or as set in our Facebook image setting.
+* Fixes an unintended backwards incompatible change which caused "Warning: Illegal string offset ‘url’ in".
+* Fixes an unintended change which caused SVGs to be included in consideration for the `og:image` tag. SVG images are not allowed by Facebook, so these should never be used in the `og:image` tag.
+
+= 7.4.0 =
+Release Date: May 1st, 2018
 
 Enhancements:
-
-* Allows more strings to be translated.
-* Replaces any Yoast domain URLs with shortlink alternatives.
+* Adds OpenGraph image dimension-meta tags for more images.
+* Excludes images from being used in OpenGraph meta tags, if the image is larger than 2MB.
+* Adds caching for images found in a post to reduce load.
+* Adds image alt tag to the OpenGraph output, using the meta tag `og:image:alt`.
+* Adds the `is_post_type_viewable` WordPress function to improve support for the `wpseo_accessible_post_types` filters.
 
 Bugfixes:
+* Fixes a bug where a non-array value causes a fatal error when `cron_schedules` filter has been executed.
+* Fixes a bug where not all database tables were removed when a subsite was deleted in a multisite environment.
+* Fixes a bug where deleting multiple posts might cause performance issues. Props to [Moeini](https://github.com/abolfazl-moeini).
 
-* Fixes a bug where the internal links aren't recognized when the `site_url` is not the same as the `home_url`.
-* Fixes a bug where the user locale is not used for the Help Center when it is different from the site locale.
-* Removes unsupported PHP 5.2 arguments in an `array_unique` call in the Term image sitemap.
-* Removes unsupported PHP 5.3 arguments in a `json_encode` call in the notification functionality.
-* Added support for locales without territory (examples: et, fi) - Props [Peeter Marvet](https://github.com/petskratt).
-* Added support support for 3-letter language codes (example: rhg) - Props [Peeter Marvet](https://github.com/petskratt).
-* Fixes a JavaScript compatibility issue by prefixing the webpack jsonP function with `yoast` - Props [Raitis Sevelis from Visual Composer](https://visualcomposer.io/).
+Other:
+* Introduces a message, warning about dropping of PHP 5.2 support in an upcoming version.
+* Alters the configuration service text in the Configuration Wizard when a user is already running Yoast SEO Premium. Previously the text contained a reference to getting a bundled copy of Premium, even if the user was already running Premium.
 
 = Earlier versions =
 
-For the changelog of earlier versions, please refer to the separate changelog.txt file.
+For the changelog of earlier versions, please refer to https://yoa.st/yoast-seo-changelog

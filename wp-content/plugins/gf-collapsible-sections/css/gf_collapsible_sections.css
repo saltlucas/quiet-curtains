@@ -1,0 +1,72 @@
+/*
+gf_collapsible_sections.css
+Gravity Forms Collapsible Sections Styles
+http://jetsloth.com/gravity-forms-collapsible-sections/
+*/
+.gform_wrapper .gsection.collapsible-sections-field,
+.collapsible-sections-field {
+  cursor: pointer;
+  padding: 10px 20px 10px 20px !important;
+  margin: 24px 0 0 0 !important;
+  border: 1px solid #ccc !important;
+  background-color: #f1f1f1;
+  position: relative; }
+
+.collapsible-sections-field .gsection_title {
+  position: relative;
+  display: block; }
+
+.gform_wrapper .collapsible-sections-field h2.gsection_title {
+  padding-right: 30px !important; }
+
+.gform_wrapper .collapsible-sections-field .gsection_title + .gsection_description {
+  padding-right: 0;
+  margin-bottom: 0; }
+
+.collapsible-sections-field .gsection_title:after {
+  content: "\e900";
+  font: 400 20px/1 slothicons !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.collapsible-sections-field.collapsible-sections-open .gsection_title:after {
+  content: "\e901" !important; }
+
+.collapsible-sections-icons-alt .collapsible-sections-field .gsection_title:after {
+  content: "\e903" !important; }
+
+.collapsible-sections-icons-alt .collapsible-sections-field.collapsible-sections-open .gsection_title:after {
+  content: "\e902" !important; }
+
+.collapsible-sections-collapsible-body {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-top: none; }
+  .collapsible-sections-collapsible-body:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .collapsible-sections-collapsible-body .gsection_description {
+    padding: 0; }
+
+.form-has-collapsible-sections.collapsible-sections-footer-inside_last .gform_footer {
+  clear: both; }
+
+.gform_wrapper .gfield.collapsible-sections-end-field.collapsible-sections-end-field-hidden {
+  display: none !important; }
+
+.gform_wrapper .gsection.collapsible-sections-field.collapsible-sections-section-error,
+.collapsible-sections-field.collapsible-sections-section-error {
+  border-color: #790000 !important;
+  background-color: rgba(255, 223, 224, 0.25); }
+  .gform_wrapper .gsection.collapsible-sections-field.collapsible-sections-section-error .gsection_title,
+  .gform_wrapper .gsection.collapsible-sections-field.collapsible-sections-section-error .gsection_description,
+  .gform_wrapper .gsection.collapsible-sections-field.collapsible-sections-section-error .gsection_title:after,
+  .collapsible-sections-field.collapsible-sections-section-error .gsection_title,
+  .collapsible-sections-field.collapsible-sections-section-error .gsection_description,
+  .collapsible-sections-field.collapsible-sections-section-error .gsection_title:after {
+    color: #790000; }

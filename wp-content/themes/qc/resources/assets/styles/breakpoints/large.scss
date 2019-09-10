@@ -1,9 +1,14 @@
+.off-canvas {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
 .border-right {
   border-right: 1px solid $gray-light;
 }
 
 //header
-header.container {
+header {
   position: relative;
 
   .button-container {
@@ -35,6 +40,35 @@ header.container {
   }
 }
 
+.block {
+  .block-wrap.large-aspect-3-2 {
+    min-height: auto;
+    width: 100%;
+    position: relative;
+    height: 0;
+    padding: 66.64% 0 0;
+    overflow: hidden;
+  }
+
+  .block-wrap.large-aspect-2-1 {
+    min-height: auto;
+    width: 100%;
+    position: relative;
+    height: 0;
+    padding: 50% 0 0;
+    overflow: hidden;
+  }
+
+  .block-wrap.large-aspect-3-1 {
+    min-height: auto;
+    width: 100%;
+    position: relative;
+    height: 0;
+    padding: 33.33% 0 0;
+    overflow: hidden;
+  }
+}
+
 button.button.search-icon {
   padding-right: 2rem;
 }
@@ -50,7 +84,7 @@ button.button.search-icon {
   }
 }
 
-header.container.is-stuck {
+header.is-stuck {
   .nav-utility {
     line-height: 46px;
   }
@@ -81,17 +115,45 @@ header.container.is-stuck {
     padding-bottom: 0;
   }
 
-  .is-submenu-item {
+  .sub-menu {
     a {
-      line-height: 1.6;
+      line-height: 40px;
       padding: 1rem 1.5rem;
     }
   }
 }
 
+nav.off-canvas .is-dropdown-submenu {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
 .dropdown.menu.large-horizontal > li.opens-right > .is-dropdown-submenu {
   z-index: 100;
 }
+
+ul.js-dropdown-active {
+  position: absolute;
+  visibility: visible;
+  display: block;
+  opacity: 1;
+  width: 300px;
+  height: auto;
+}
+
+/*
+ul.sub-menu {
+  opacity: 0;
+  width: 300px;
+  height: 0;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+li.menu-item-has-children:hover .sub-menu {
+  opacity: 1;
+  height: auto;
+}
+*/
 
 .full-height {
   height: calc(100vh - 87px);
@@ -100,6 +162,110 @@ header.container.is-stuck {
 //Frontpage
 #home-slider-section .full-height {
   height: calc(100vh - 87px);
+}
+
+.hover-content {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  visibility: hidden;
+  height: 0;
+}
+
+.hover-content {
+  color: $white;
+  padding: 0;
+  font-family: $font-family-medium;
+  font-weight: $font-weight-medium;
+  margin-top: 0;
+
+  p {
+    margin: 0;
+  }
+}
+
+.hover-column:hover {
+  .button,
+  .button-info {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    visibility: hidden;
+    height: 0;
+    display: none;
+  }
+
+  .hover-content {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    height: auto;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    padding: 1rem;
+  }
+
+  .blue-medium .block-image::after {
+    background-color: rgba($blue-medium, 1);
+  }
+
+  .salmon .block-image::after {
+    background-color: rgba($salmon, 1);
+  }
+
+  .blue-dark .block-image::after {
+    background-color: rgba($blue-dark, 1);
+  }
+}
+
+.home-cta-row .button.outline-white {
+  border: 2px solid $white;
+}
+
+.val-content-row > .column {
+  position: relative;
+}
+
+.val-icon {
+  position: absolute;
+  z-index: 20;
+  top: -45px;
+  padding: 30px;
+  border-radius: 100%;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.val-content {
+  padding: 4rem;
+}
+
+.letter-column {
+  margin-top: 0;
+}
+
+.letter-content {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.quote-column {
+  position: relative;
+
+  .quote-content {
+    position: absolute;
+    padding: 4rem 2rem;
+    box-shadow: 1px 1px 11px rgba(100, 100, 100, 0.5);
+    left: -50px;
+    top: 20%;
+    z-index: 2;
+  }
 }
 
 //Gravity Forms
@@ -121,4 +287,37 @@ header.container.is-stuck {
   &.gf-right-half {
     clear: none;
   }
+}
+
+//Product Page
+.sound-p {
+  max-width: 450px;
+}
+
+.noise-section {
+  padding-bottom: 12rem !important;
+}
+
+.absorption-icon {
+  position: absolute;
+  height: auto;
+  width: 200px;
+  transform: translateX(-50%);
+}
+
+.noise-icon {
+  position: absolute;
+  height: auto;
+  width: 160px;
+  transform: translateX(10%);
+}
+
+//Contact Page
+#contact-section .row .column:first-child {
+  border-right: 1px solid $gray-light;
+}
+
+//Footer
+#mc_embed_signup .left-input {
+  padding-right: 1.5rem;
 }

@@ -14,8 +14,8 @@ import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
 import page from './routes/page';
-import edgOrtho65mm from './routes/edg-ortho-65mm';
-import forHealthcareProfessionals from './routes/for-healthcare-professionals';
+import templateProduct from './routes/template-product';
+import portfolio from './routes/portfolio';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -25,10 +25,10 @@ const routes = new Router({
   home,
   // About Us page, note the change from about-us to aboutUs.
   aboutUs,
-  /** All pages, note the change from about-us to aboutUs. */  
+  /** All pages, note the change from about-us to aboutUs. */
   page,
-  edgOrtho65mm,
-  forHealthcareProfessionals,
+  templateProduct,
+  portfolio,
 });
 
 // Load Events
