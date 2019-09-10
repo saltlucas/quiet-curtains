@@ -9,7 +9,7 @@ Extremely fast and performant mobile first WordPress site. Load time under 1s.
 ## Live Site
 [www.acoustic-curtains.com](https://www.acoustic-curtains.com/)
 
-![Screenshot of form](https://drive.google.com/uc?export=view&id=1THbFyw21bb7nbIIocX-603qvSkYvS9Gl)
+![Screenshot of home](https://drive.google.com/uc?export=view&id=15Jd7StlDRNZoPT2Jw_LTE2Z9U_Hlmoci)
 
 ![Screenshot of form](https://drive.google.com/uc?export=view&id=1Qf5ooBnbg7bjY0B6CTGoLYObzrFijqem)
 
