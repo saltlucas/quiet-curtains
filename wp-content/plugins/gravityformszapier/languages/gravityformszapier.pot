@@ -1,0 +1,245 @@
+# Copyright (C) 2019 rocketgenius
+# This file is distributed under the same license as the Gravity Forms Zapier Add-on plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Gravity Forms Zapier Add-on 3.1.4\n"
+"Report-Msgid-Bugs-To: https://gravityforms.com/support\n"
+"Last-Translator: Gravity Forms <support@gravityforms.com>\n"
+"Language-Team: Gravity Forms <support@gravityforms.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-05-07T15:54:21+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.2.0\n"
+"X-Domain: gravityformszapier\n"
+
+#. Plugin Name of the plugin
+msgid "Gravity Forms Zapier Add-on"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://www.gravityforms.com"
+msgstr ""
+
+#. Description of the plugin
+msgid "Integrates Gravity Forms with Zapier, allowing form submissions to be automatically sent to your configured Zaps."
+msgstr ""
+
+#. Author of the plugin
+msgid "rocketgenius"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.rocketgenius.com"
+msgstr ""
+
+#: plugin-upgrade.php:73
+msgid "Oops!! Something went wrong.%sPlease try again or %scontact us%s."
+msgstr ""
+
+#: zapier.php:183
+msgid "Zap deleted."
+msgstr ""
+
+#: zapier.php:187
+#: zapier.php:309
+msgid "Zapier"
+msgstr ""
+
+#: zapier.php:230
+msgid "Add New"
+msgstr ""
+
+#: zapier.php:297
+msgid "Zap saved successfully. %sBack to list.%s"
+msgstr ""
+
+#: zapier.php:305
+msgid "Zap could not be updated. Please enter all required information below."
+msgstr ""
+
+#: zapier.php:341
+msgid "To create a new zap, you must have the Webhook URL. The Webhook URL may be found when you go to your %sZapier dashboard%s and create a new zap, or when you edit an existing zap. Once you have saved your new feed the form fields will be available for mapping on the Zapier site."
+msgstr ""
+
+#: zapier.php:350
+#: zapier.php:1515
+#: zapier.php:1936
+msgid "Zap Name"
+msgstr ""
+
+#: zapier.php:362
+#: zapier.php:1516
+#: zapier.php:1937
+msgid "Webhook URL"
+msgstr ""
+
+#: zapier.php:374
+#: zapier.php:1517
+msgid "Active"
+msgstr ""
+
+#: zapier.php:381
+#: zapier.php:397
+msgid "Yes"
+msgstr ""
+
+#: zapier.php:384
+#: zapier.php:400
+msgid "No"
+msgstr ""
+
+#: zapier.php:390
+#: zapier.php:1519
+msgid "Use Admin Labels"
+msgstr ""
+
+#: zapier.php:414
+msgid "Enable"
+msgstr ""
+
+#: zapier.php:420
+msgid "Send to Zapier if "
+msgstr ""
+
+#: zapier.php:427
+msgid "is"
+msgstr ""
+
+#: zapier.php:429
+msgid "is not"
+msgstr ""
+
+#: zapier.php:431
+msgid "greater than"
+msgstr ""
+
+#: zapier.php:433
+msgid "less than"
+msgstr ""
+
+#: zapier.php:435
+msgid "contains"
+msgstr ""
+
+#: zapier.php:437
+msgid "starts with"
+msgstr ""
+
+#: zapier.php:439
+msgid "ends with"
+msgstr ""
+
+#: zapier.php:455
+msgid "Save Zapier Feed"
+msgstr ""
+
+#: zapier.php:455
+msgid "Update Zapier Feed"
+msgstr ""
+
+#: zapier.php:760
+msgid "Form ID"
+msgstr ""
+
+#: zapier.php:761
+msgid "Form Title"
+msgstr ""
+
+#: zapier.php:1349
+msgid "Gravity Forms Zapier Add-On has been successfully uninstalled. It can be re-activated from the %splugins page%s."
+msgstr ""
+
+#: zapier.php:1364
+msgid "Zapier is a service to which you may submit your form data so that information may be passed along to another online service. If you do not have a Zapier account, you may %ssign up for one here%s."
+msgstr ""
+
+#: zapier.php:1370
+msgid "Uninstall Zapier Add-On"
+msgstr ""
+
+#: zapier.php:1376
+msgid "This operation deletes ALL Zapier feeds."
+msgstr ""
+
+#: zapier.php:1378
+msgid "If you continue, you will not be able to recover any Zapier data."
+msgstr ""
+
+#: zapier.php:1381
+msgid "Warning! ALL Zapier settings will be deleted. This cannot be undone. \\'OK\\' to delete, \\'Cancel\\' to stop"
+msgstr ""
+
+#: zapier.php:1452
+msgid "There is a new version of Gravity Forms Zapier Add-On available."
+msgstr ""
+
+#: zapier.php:1452
+msgid "View version %s Details"
+msgstr ""
+
+#: zapier.php:1453
+msgid "%sRegister%s your copy of Gravity Forms to receive access to automatic upgrades and support. Need a license key? %sPurchase one now%s."
+msgstr ""
+
+#: zapier.php:1476
+msgid "You don't have adequate permission to uninstall the Zapier Add-On."
+msgstr ""
+
+#: zapier.php:1515
+msgid "This is a friendly name so you know what Zap is run when this form is submitted."
+msgstr ""
+
+#: zapier.php:1516
+msgid "This is the URL provided by Zapier when you created your Zap on their website. This is the location to which your form data will be submitted to Zapier for additional processing."
+msgstr ""
+
+#: zapier.php:1517
+msgid "Check this box if you want your form submissions to be sent to Zapier for processing."
+msgstr ""
+
+#: zapier.php:1518
+msgid "Conditional Logic"
+msgstr ""
+
+#: zapier.php:1518
+msgid "When Conditional Logic is enabled, submissions for this form will only be sent to Zapier when the condition is met. When disabled, all submissions for this form will be sent to Zapier."
+msgstr ""
+
+#: zapier.php:1519
+msgid "By default the field labels will be sent to Zapier. Enable this option to send the field admin labels when available."
+msgstr ""
+
+#: zapier.php:1641
+#: zapier.php:1705
+msgid "Send feed to Zapier only when payment is received."
+msgstr ""
+
+#: zapier.php:1910
+msgid "Table does not exist"
+msgstr ""
+
+#: zapier.php:1989
+msgid "You currently don't have any Zapier Feeds, let's go %screate one%s"
+msgstr ""
+
+#: zapier.php:2013
+msgid "Edit this item"
+msgstr ""
+
+#: zapier.php:2013
+msgid "Edit"
+msgstr ""
+
+#: zapier.php:2014
+msgid "Delete this item"
+msgstr ""
+
+#: zapier.php:2014
+msgid "WARNING: You are about to delete this Zapier feed."
+msgstr ""
+
+#: zapier.php:2014
+msgid "Delete"
+msgstr ""

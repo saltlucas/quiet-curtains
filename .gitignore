@@ -1,13 +1,69 @@
-*.log
-wp-config.php
-wp-content/advanced-cache.php
-wp-content/backup-db/
-wp-content/backups/
-wp-content/blogs.dir/
-wp-content/cache/
-wp-content/upgrade/
-wp-content/wp-cache-config.php
-wp-content/plugins/hello.php
-wp-content/uploads/cache/
 
 /.htaccess
+
+# WordPress #
+############
+wp-config.php
+wp-config-local.php
+wp-cli.local.yml
+wp-content/uploads
+wp-content/blogs.dir/
+wp-content/upgrade/
+<<<<<<< HEAD
+wp-content/debug.log
+=======
+>>>>>>> b9a6a5f313dab38fefdfc386a2519ccd0aa07b82
+wp-content/updraft/
+wp-content/backupwordpress-*/
+wp-content/backups/
+wp-content/backup-db/
+wp-content/managewp/backups/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+Search-Replace-DB
+sitemap.xml
+sitemap.xml.gz
+*.log
+
+# @TODO writable paths
+wp-content/cache/
+wp-content/backups/
+
+# Avoid accidental modification of pantheon.upstream.yml in sites
+# created from this upstream
+pantheon.upstream.yml
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+!wp-includes/**/*.gz
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.DS_Store 
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Thumbs.db
+._*
+
+# Vim generated files #
+######################
+*.un~
+
+# SASS #
+##########
+.sass-cache

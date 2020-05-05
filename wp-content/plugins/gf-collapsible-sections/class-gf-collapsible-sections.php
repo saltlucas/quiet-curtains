@@ -165,7 +165,8 @@ class GFCollapsibleSections extends GFAddOn {
 				),
 				array(
 						'handle'  => 'slothicons_css',
-						'src'     => 'https://s3-us-west-2.amazonaws.com/jetsloth/assets/slothicons.css',
+						'src'     => $this->get_base_url() . '/css/slothicons.css',
+						//'src'     => 'https://s3-us-west-2.amazonaws.com/jetsloth/assets/slothicons.css',
 						'version' => $this->_version,
 						'media'   => 'screen',
 						'enqueue' => array(

@@ -1,0 +1,9 @@
+[12-Oct-2019 12:57:04 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/acoust88/public_html/wp-includes/rss-functions.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/acoust88/public_html/wp-includes/rss-functions.php on line 8
+[17-Oct-2019 10:18:54 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/acoust88/public_html/wp-includes/rss-functions.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/acoust88/public_html/wp-includes/rss-functions.php on line 8
+[01-Apr-2020 16:36:59 CST6CDT] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/usr/local/php72/pear') in /home/acoust88/public_html/wp-includes/functions.php on line 8

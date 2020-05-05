@@ -1296,7 +1296,7 @@ class GFImageChoices extends GFAddOn {
 		if ( $old_license && $field_setting != $old_license ) {
 			// Send the remote request to deactivate the old license
 			$response = $this->perform_edd_license_request( 'deactivate_license', $old_license );
-			if ( !empty($response) && is_object($response) && property_exists($response, 'license') && $response->license == 'deactivated' ) {
+			if ( property_exists($response, 'license') && $response->license == 'deactivated' ) {
 				delete_option('gf_image_choices_license_status');
 			}
 		}
@@ -1304,7 +1304,7 @@ class GFImageChoices extends GFAddOn {
 		if ( ! empty( $field_setting ) ) {
 			// Send the remote request to activate the new license
 			$response = $this->perform_edd_license_request( 'activate_license', $field_setting );
-			if ( !empty($response) && is_object($response) && property_exists($response, 'license') ) {
+			if ( property_exists($response, 'license') ) {
 				update_option('gf_image_choices_license_status', $response->license);
 			}
 		}

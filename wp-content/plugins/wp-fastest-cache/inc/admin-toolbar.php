@@ -8,10 +8,12 @@
 				add_action('admin_enqueue_scripts', array($this, 'load_toolbar_js'));
 				add_action('admin_enqueue_scripts', array($this, 'load_toolbar_css'));
 			}else{
-				add_action('wp_before_admin_bar_render', array($this, "wpfc_tweaked_toolbar_on_frontpage"));
-				add_action('wp_enqueue_scripts', array($this, 'load_toolbar_js'));
-				add_action('wp_enqueue_scripts', array($this, 'load_toolbar_css'));
-				add_action('wp_footer', array($this, 'print_my_inline_script'));
+				if(is_admin_bar_showing()){
+					add_action('wp_before_admin_bar_render', array($this, "wpfc_tweaked_toolbar_on_frontpage"));
+					add_action('wp_enqueue_scripts', array($this, 'load_toolbar_js'));
+					add_action('wp_enqueue_scripts', array($this, 'load_toolbar_css'));
+					add_action('wp_footer', array($this, 'print_my_inline_script'));
+				}
 			}
 		}
 
@@ -25,7 +27,10 @@
 
 		public function print_my_inline_script() {
 			?>
-			<script type="text/javascript">var wpfc_ajaxurl = "<?php echo admin_url( 'admin-ajax.php' );?>";</script>
+			<script type="text/javascript">
+				var wpfc_ajaxurl = "<?php echo admin_url( 'admin-ajax.php' ); ?>";
+				var wpfc_nonce = "<?php echo wp_create_nonce("wpfc"); ?>";
+			</script>
 			<?php
 		}
 
@@ -64,19 +69,19 @@
 
 			$wp_admin_bar->add_node(array(
 				'id'    => 'wpfc-toolbar-parent',
-				'title' => 'Clear Cache'
+				'title' => __("Delete Cache", "wp-fastest-cache"),
 			));
 
 			$wp_admin_bar->add_menu( array(
 				'id'    => 'wpfc-toolbar-parent-delete-cache',
-				'title' => 'Delete Cache',
+				'title' => __("Clear All Cache", "wp-fastest-cache"),
 				'parent'=> 'wpfc-toolbar-parent',
 				'meta' => array("class" => "wpfc-toolbar-child")
 			));
 
 			$wp_admin_bar->add_menu( array(
 				'id'    => 'wpfc-toolbar-parent-delete-cache-and-minified',
-				'title' => 'Delete Cache and Minified CSS/JS',
+				'title' => __("Delete Cache and Minified CSS/JS", "wp-fastest-cache"),
 				'parent'=> 'wpfc-toolbar-parent',
 				'meta' => array("class" => "wpfc-toolbar-child")
 			));

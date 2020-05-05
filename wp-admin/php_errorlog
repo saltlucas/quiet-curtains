@@ -1,0 +1,23 @@
+[25-Nov-2019 16:47:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function acf_include() in /home/acoust88/public_html/wp-content/plugins/advanced-custom-fields-pro/acf.php:126
+Stack trace:
+#0 /home/acoust88/public_html/wp-content/plugins/advanced-custom-fields-pro/acf.php(691): ACF->initialize()
+#1 /home/acoust88/public_html/wp-content/plugins/advanced-custom-fields-pro/acf.php(702): acf()
+#2 /home/acoust88/public_html/wp-settings.php(360): include_once('/home/acoust88/...')
+#3 /home/acoust88/public_html/wp-config.php(95): require_once('/home/acoust88/...')
+#4 /home/acoust88/public_html/wp-load.php(37): require_once('/home/acoust88/...')
+#5 /home/acoust88/public_html/wp-admin/admin-ajax.php(22): require_once('/home/acoust88/...')
+#6 {main}
+  thrown in /home/acoust88/public_html/wp-content/plugins/advanced-custom-fields-pro/acf.php on line 126
+[13-Feb-2020 16:32:32 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting ',' or ')' in /home/acoust88/public_html/wp-content/plugins/advanced-custom-fields-pro/pro/admin/admin-updates.php on line 233
+[13-Feb-2020 16:33:12 UTC] DUP PRO:license key is empty on uninstall!
+[04-May-2020 15:40:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function acf_load_textdomain() in /home/acoust88/public_html/wp-content/plugins/advanced-custom-fields-pro/acf.php:216
+Stack trace:
+#0 /home/acoust88/public_html/wp-includes/class-wp-hook.php(287): ACF->init('')
+#1 /home/acoust88/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 /home/acoust88/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/acoust88/public_html/wp-settings.php(540): do_action('init')
+#4 /home/acoust88/public_html/wp-config.php(95): require_once('/home/acoust88/...')
+#5 /home/acoust88/public_html/wp-load.php(37): require_once('/home/acoust88/...')
+#6 /home/acoust88/public_html/wp-admin/admin-ajax.php(22): require_once('/home/acoust88/...')
+#7 {main}
+  thrown in /home/acoust88/public_html/wp-content/plugins/advanced-custom-fields-pro/acf.php on line 216

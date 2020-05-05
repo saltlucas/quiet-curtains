@@ -4,7 +4,7 @@ Plugin Name: Gravity Forms Collapsible Sections
 Plugin URI: https://jetsloth.com/gravity-forms-collapsible-sections/
 Description: Easily make one or more sections in your Gravity Form collapsible with accordion style interaction
 Author: JetSloth
-Version: 1.0.9
+Version: 1.0.10
 Requires at least: 4.0
 Tested up to: 4.8
 Author URI: https://jetsloth.com
@@ -29,7 +29,7 @@ Text Domain: gf_image_choices
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-define('GFCS_VERSION', '1.0.9');
+define('GFCS_VERSION', '1.0.10');
 define('GFCS_HOME', 'https://jetsloth.com');
 define('GFCS_NAME', 'Gravity Forms Collapsible Sections');
 define('GFCS_SLUG', 'gf-collapsible-sections');

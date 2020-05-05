@@ -2,8 +2,8 @@
 Contributors: jetsloth
 Tags: admin,gravityforms,forms
 Requires at least: 4.0
-Tested up to: 4.9.5
-Version: 1.1.12
+Tested up to: 4.8.3
+Version: 1.1.13
 License: GPL2
 License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
