@@ -97,9 +97,14 @@ header.is-stuck {
   padding-bottom: 0;
 }
 
-#menu-primary {
+#menu-primary.dropdown.menu {
   float: left;
   padding-right: 2rem;
+
+  > .menu-item > a {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
 }
 
 .is-dropdown-submenu {
@@ -157,6 +162,10 @@ li.menu-item-has-children:hover .sub-menu {
 
 .full-height {
   height: calc(100vh - 87px);
+}
+
+#header-utility {
+  padding: 0 1rem;
 }
 
 //Frontpage

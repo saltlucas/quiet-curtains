@@ -13,7 +13,7 @@
   },
   "publicPath": "/wp-content/themes/qc",
   "devUrl": "https://www.acoustic-curtains.com",
-  "proxyUrl": "http://localhost:3000/qc",
+  "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
     "app/**/*.php",

@@ -1,6 +1,15 @@
 <div class="sticky-container" data-sticky-container>
 <header class="sticky" data-sticky data-margin-top="0" data-sticky-on="large" data-btm-anchor="footer:top">
-    <div class="clearfix">
+    <div class="header-utility">
+        <div class="nav-menu">
+            <nav id="header-utility" class="header-utility" data-off-canvas>
+            @if (has_nav_menu('utility_navigation'))
+                {!! wp_nav_menu(['theme_location' => 'utility_navigation', 'menu_class' => 'nav horizontal menu dropdown', 'items_wrap' => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>']) !!}
+            @endif
+            </nav>
+        </div>        
+    </div>
+    <div class="clearfix header-main">
         <div class="nav-logo float-left">
         <a class="brand" href="{{ home_url('/') }}"><img alt="{{ get_bloginfo('name', 'display') }}" style="max-height: 55px;" src="@asset('images/Logo.svg')"></a>
         </div>

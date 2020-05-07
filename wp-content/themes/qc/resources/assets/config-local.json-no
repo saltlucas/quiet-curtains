@@ -11,9 +11,9 @@
       "./styles/admin.scss"
     ]
   },
-  "publicPath": "/qc/wp-content/themes/qc",
-  "devUrl": "http://localhost/qc",
-  "proxyUrl": "http://localhost:3000/qc",
+  "publicPath": "/wp-content/themes/qc",
+  "devUrl": "https://quietcurtains.localhost",
+  "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
     "app/**/*.php",

@@ -553,6 +553,10 @@ header {
 }
 
 //Menu
+.header-main {
+  position: relative;
+}
+
 nav.off-canvas {
   width: 100%;
   height: auto;
@@ -668,6 +672,21 @@ nav {
 
 .is-dropdown-submenu {
   position: static;
+}
+
+#header-utility {
+  background-color: rgb(246, 246, 246);
+
+  #menu-top-menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav .menu-item > a {
+    line-height: 19.25px;
+    font-size: 14px;
+    color: $blue;
+  }
 }
 
 //Search

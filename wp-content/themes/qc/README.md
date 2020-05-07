@@ -1,4 +1,4 @@
-# Use Node 6
+# Use Node 8
 # [Sage](https://roots.io/sage/)
 [![Packagist](https://img.shields.io/packagist/vpre/roots/sage.svg?style=flat-square)](https://packagist.org/packages/roots/sage)
 [![devDependency Status](https://img.shields.io/david/dev/roots/sage.svg?style=flat-square)](https://david-dm.org/roots/sage#info=devDependencies)
@@ -33,7 +33,7 @@ Make sure all dependencies have been installed before moving on:
 * [WordPress](https://wordpress.org/) >= 4.7
 * [PHP](http://php.net/manual/en/install.php) >= 7.0
 * [Composer](https://getcomposer.org/download/)
-* [Node.js](http://nodejs.org/) >= 6.9.x Use Node 6
+* [Node.js](http://nodejs.org/) >= 6.9.x Use Node 8
 * [Yarn](https://yarnpkg.com/en/docs/install)
 
 ## Theme installation
